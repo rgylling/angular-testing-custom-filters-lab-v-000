@@ -7,4 +7,10 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+	it('should remove voewls', function (){
+		var myTest = $filter('removeAllVowels')('aeiof');
+
+		expect(myTest).toEqual('f');
+	})
+
 });
